@@ -1,0 +1,751 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
+
+<p class=MsoNormal>&lt;html lang=&quot;ms&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>    &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;title&gt;Kuiz Kesedaran Nombor &amp; Operasi
+Asas&lt;/title&gt;</p>
+
+<p class=MsoNormal>    &lt;style&gt;</p>
+
+<p class=MsoNormal>        * {</p>
+
+<p class=MsoNormal>            box-sizing: border-box;</p>
+
+<p class=MsoNormal>            font-family: 'Segoe UI', Tahoma, Geneva,
+Verdana, sans-serif;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        body {</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #667eea 0%,
+#764ba2 100%);</p>
+
+<p class=MsoNormal>            margin: 0;</p>
+
+<p class=MsoNormal>            padding: 20px;</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            align-items: center;</p>
+
+<p class=MsoNormal>            min-height: 100vh;</p>
+
+<p class=MsoNormal>            color: #333;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .quiz-container {</p>
+
+<p class=MsoNormal>            background-color: #ffffff;</p>
+
+<p class=MsoNormal>            border-radius: 20px;</p>
+
+<p class=MsoNormal>            box-shadow: 0 15px 35px rgba(0,0,0,0.2);</p>
+
+<p class=MsoNormal>            padding: 35px;</p>
+
+<p class=MsoNormal>            width: 100%;</p>
+
+<p class=MsoNormal>            max-width: 650px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        h1 {</p>
+
+<p class=MsoNormal>            color: #2c3e50;</p>
+
+<p class=MsoNormal>            margin-top: 0;</p>
+
+<p class=MsoNormal>            margin-bottom: 20px;</p>
+
+<p class=MsoNormal>            font-size: 26px;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .progress-container {</p>
+
+<p class=MsoNormal>            margin-bottom: 25px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .progress-bar {</p>
+
+<p class=MsoNormal>            background-color: #eef2f5;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            height: 12px;</p>
+
+<p class=MsoNormal>            overflow: hidden;</p>
+
+<p class=MsoNormal>            width: 100%;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .progress {</p>
+
+<p class=MsoNormal>            background: linear-gradient(90deg, #4facfe 0%,
+#00f2fe 100%);</p>
+
+<p class=MsoNormal>            height: 100%;</p>
+
+<p class=MsoNormal>            width: 0%;</p>
+
+<p class=MsoNormal>            transition: width 0.4s ease;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .stats {</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            justify-content: space-between;</p>
+
+<p class=MsoNormal>            margin-bottom: 25px;</p>
+
+<p class=MsoNormal>            font-weight: 600;</p>
+
+<p class=MsoNormal>            color: #7f8c8d;</p>
+
+<p class=MsoNormal>            font-size: 15px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .question-box {</p>
+
+<p class=MsoNormal>            font-size: 19px;</p>
+
+<p class=MsoNormal>            font-weight: 600;</p>
+
+<p class=MsoNormal>            color: #2c3e50;</p>
+
+<p class=MsoNormal>            margin-bottom: 30px;</p>
+
+<p class=MsoNormal>            line-height: 1.6;</p>
+
+<p class=MsoNormal>            text-align: left;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .options-container {</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: 1fr;</p>
+
+<p class=MsoNormal>            gap: 15px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .btn-option {</p>
+
+<p class=MsoNormal>            background-color: #ffffff;</p>
+
+<p class=MsoNormal>            border: 2px solid #e2e8f0;</p>
+
+<p class=MsoNormal>            border-radius: 12px;</p>
+
+<p class=MsoNormal>            padding: 16px 20px;</p>
+
+<p class=MsoNormal>            font-size: 16px;</p>
+
+<p class=MsoNormal>            font-weight: 500;</p>
+
+<p class=MsoNormal>            color: #4a5568;</p>
+
+<p class=MsoNormal>            cursor: pointer;</p>
+
+<p class=MsoNormal>            transition: all 0.2s ease;</p>
+
+<p class=MsoNormal>            text-align: left;</p>
+
+<p class=MsoNormal>            outline: none;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .btn-option:hover {</p>
+
+<p class=MsoNormal>            background-color: #f7fafc;</p>
+
+<p class=MsoNormal>            border-color: #cbd5e0;</p>
+
+<p class=MsoNormal>            transform: translateY(-2px);</p>
+
+<p class=MsoNormal>            box-shadow: 0 4px 6px rgba(0,0,0,0.05);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .score-screen {</p>
+
+<p class=MsoNormal>            display: none;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>            padding: 20px 0;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .score-screen h1 {</p>
+
+<p class=MsoNormal>            font-size: 32px;</p>
+
+<p class=MsoNormal>            margin-bottom: 15px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .score-text {</p>
+
+<p class=MsoNormal>            font-size: 22px;</p>
+
+<p class=MsoNormal>            margin-bottom: 30px;</p>
+
+<p class=MsoNormal>            color: #4a5568;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .badge {</p>
+
+<p class=MsoNormal>            font-size: 80px;</p>
+
+<p class=MsoNormal>            margin-bottom: 20px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .btn-restart {</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #4facfe 0%,
+#00f2fe 100%);</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            border: none;</p>
+
+<p class=MsoNormal>            border-radius: 12px;</p>
+
+<p class=MsoNormal>            padding: 15px 40px;</p>
+
+<p class=MsoNormal>            font-size: 17px;</p>
+
+<p class=MsoNormal>            cursor: pointer;</p>
+
+<p class=MsoNormal>            font-weight: bold;</p>
+
+<p class=MsoNormal>            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);</p>
+
+<p class=MsoNormal>            transition: all 0.2s ease;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .btn-restart:hover {</p>
+
+<p class=MsoNormal>            transform: translateY(-2px);</p>
+
+<p class=MsoNormal>            box-shadow: 0 7px 20px rgba(79, 172, 254, 0.6);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    &lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;div class=&quot;quiz-container&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;div id=&quot;quiz-screen&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;h1&gt;&#129518; Kuiz Matematik: Kesedaran
+Nombor&lt;/h1&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;progress-container&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;progress-bar&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;progress&quot;
+id=&quot;progress&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;stats&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;span
+id=&quot;question-number&quot;&gt;Soalan 1 / 15&lt;/span&gt;</p>
+
+<p class=MsoNormal>            &lt;span id=&quot;score-display&quot;&gt;Markah:
+0&lt;/span&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;question-box&quot;
+id=&quot;question-text&quot;&gt;</p>
+
+<p class=MsoNormal>            Sila tunggu, soalan sedang dimuatkan...</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;options-container&quot;
+id=&quot;options-box&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;div id=&quot;score-screen&quot;
+class=&quot;score-screen&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;badge&quot;
+id=&quot;badge-icon&quot;&gt;&#127942;&lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;h1&gt;Tahniah! Anda Selesai &#127881;&lt;/h1&gt;</p>
+
+<p class=MsoNormal>        &lt;p class=&quot;score-text&quot;
+id=&quot;final-score&quot;&gt;Anda mendapat 0 daripada 15 betul.&lt;/p&gt;</p>
+
+<p class=MsoNormal>        &lt;button class=&quot;btn-restart&quot;
+onclick=&quot;restartQuiz()&quot;&gt;Main Semula&lt;/button&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;script&gt;</p>
+
+<p class=MsoNormal>    // Comprehensive 15 math questions dataset mapped to
+indices (A=0, B=1, C=2, D=3)</p>
+
+<p class=MsoNormal>    const quizData = [</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;1. Antara berikut, yang manakah
+merupakan kumpulan nombor genap sahaja?&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 12, 24, 35, 48&quot;,
+&quot;B. 14, 28, 42, 56&quot;, &quot;C. 11, 13, 15, 17&quot;, &quot;D. 2, 5, 8,
+11&quot;],</p>
+
+<p class=MsoNormal>            correct: 1</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;2. Nombor ganjil ialah nombor
+yang tidak boleh dibahagi tepat dengan 2. Pilih nombor ganjil di bawah.&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 1,234&quot;, &quot;B.
+5,678&quot;, &quot;C. 9,101&quot;, &quot;D. 4,440&quot;],</p>
+
+<p class=MsoNormal>            correct: 2</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;3. Berapakah bilangan nombor perdana
+yang terletak di antara nombor 1 hingga 10?&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 3 buah nombor (3, 5,
+7)&quot;, &quot;B. 4 buah nombor (2, 3, 5, 7)&quot;, &quot;C. 5 buah nombor (1,
+2, 3, 5, 7)&quot;, &quot;D. 2 buah nombor (5, 7)&quot;],</p>
+
+<p class=MsoNormal>            correct: 1</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;4. Sesuatu nombor bukan perdana
+yang lebih besar daripada 1 dan boleh dibahagi dengan nombor lain selain
+dirinya sendiri dan 1 dikenali sebagai 'Nombor Gubahan'. Antara berikut, yang
+manakah nombor gubahan?&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 2&quot;, &quot;B. 3&quot;,
+&quot;C. 7&quot;, &quot;D. 9&quot;],</p>
+
+<p class=MsoNormal>            correct: 3</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;5. Apakah nilai tempat bagi
+digit 4 dalam nombor 342,105?&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. Ribu&quot;, &quot;B. Puluh
+Ribu&quot;, &quot;C. Ratus&quot;, &quot;D. Ratus Ribu&quot;],</p>
+
+<p class=MsoNormal>            correct: 1</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;6. Apakah nilai digit bagi angka
+8 dalam nombor 78,923?&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 8&quot;, &quot;B. 80&quot;,
+&quot;C. 800&quot;, &quot;D. 8,000&quot;],</p>
+
+<p class=MsoNormal>            correct: 3</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;7. (Kira Cepat) Anggarkan hasil
+tambah bagi 99 + 198 dengan membundarkannya kepada ratus terdekat secara
+pantas.&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 200&quot;, &quot;B.
+300&quot;, &quot;C. 400&quot;, &quot;D. 500&quot;],</p>
+
+<p class=MsoNormal>            correct: 1</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;8. (Congak) Sebuah kedai menjual
+sebiji donut dengan harga RM2. Jika Ali ingin membeli 15 biji donut, berapakah
+jumlah wang yang perlu dibayarnya?&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. RM20&quot;, &quot;B.
+RM25&quot;, &quot;C. RM30&quot;, &quot;D. RM35&quot;],</p>
+
+<p class=MsoNormal>            correct: 2</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;9. (Mental Aritmetik) Hitung
+secara mental perbezaan nilai antara 1,000 dengan 350.&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 650&quot;, &quot;B.
+750&quot;, &quot;C. 550&quot;, &quot;D. 450&quot;],</p>
+
+<p class=MsoNormal>            correct: 0</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;10. Bundarkan nombor 45,673
+kepada ratus yang terdekat.&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 45,600&quot;, &quot;B.
+45,700&quot;, &quot;C. 46,000&quot;, &quot;D. 45,670&quot;],</p>
+
+<p class=MsoNormal>            correct: 1</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;11. Teliti pola nombor berikut:
+5, 11, 17, 23, [ X ]. Apakah nilai X?&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 27&quot;, &quot;B. 28&quot;,
+&quot;C. 29&quot;, &quot;D. 30&quot;],</p>
+
+<p class=MsoNormal>            correct: 2</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;12. Cari hasil tambah bagi:
+12,350 + 4,120 =&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 16,470&quot;, &quot;B. 16,570&quot;,
+&quot;C. 15,470&quot;, &quot;D. 16,450&quot;],</p>
+
+<p class=MsoNormal>            correct: 0</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;13. Berapakah baki apabila 7,500
+ditolak dengan 2,850?&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 4,650&quot;, &quot;B.
+5,350&quot;, &quot;C. 4,550&quot;, &quot;D. 4,750&quot;],</p>
+
+<p class=MsoNormal>            correct: 0</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;14. Hitung hasil darab dan
+bahagi berikut: 24 x 5 ÷ 2 =&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 50&quot;, &quot;B. 60&quot;,
+&quot;C. 70&quot;, &quot;D. 120&quot;],</p>
+
+<p class=MsoNormal>            correct: 1</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        {</p>
+
+<p class=MsoNormal>            question: &quot;15. Mengikut peraturan BODMAS,
+selesaikan operasi bergabung ini: 40 - 12 ÷ 3 + 5&quot;,</p>
+
+<p class=MsoNormal>            options: [&quot;A. 14&quot;, &quot;B. 31&quot;,
+&quot;C. 41&quot;, &quot;D. 39&quot;],</p>
+
+<p class=MsoNormal>            correct: 2</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    ];</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    let currentQuestionIndex = 0;</p>
+
+<p class=MsoNormal>    let score = 0;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    const quizScreen =
+document.getElementById('quiz-screen');</p>
+
+<p class=MsoNormal>    const scoreScreen =
+document.getElementById('score-screen');</p>
+
+<p class=MsoNormal>    const questionText =
+document.getElementById('question-text');</p>
+
+<p class=MsoNormal>    const optionsBox =
+document.getElementById('options-box');</p>
+
+<p class=MsoNormal>    const questionNumber =
+document.getElementById('question-number');</p>
+
+<p class=MsoNormal>    const scoreDisplay =
+document.getElementById('score-display');</p>
+
+<p class=MsoNormal>    const progress = document.getElementById('progress');</p>
+
+<p class=MsoNormal>    const finalScore = document.getElementById('final-score');</p>
+
+<p class=MsoNormal>    const badgeIcon = document.getElementById('badge-icon');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    function startQuiz() {</p>
+
+<p class=MsoNormal>        currentQuestionIndex = 0;</p>
+
+<p class=MsoNormal>        score = 0;</p>
+
+<p class=MsoNormal>        scoreScreen.style.display = 'none';</p>
+
+<p class=MsoNormal>        quizScreen.style.display = 'block';</p>
+
+<p class=MsoNormal>        showQuestion();</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    function showQuestion() {</p>
+
+<p class=MsoNormal>        const currentQuestion =
+quizData[currentQuestionIndex];</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        questionText.innerText = currentQuestion.question;</p>
+
+<p class=MsoNormal>        questionNumber.innerText = `Soalan
+${currentQuestionIndex + 1} / ${quizData.length}`;</p>
+
+<p class=MsoNormal>        scoreDisplay.innerText = `Markah: ${score}`;</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        const progressPercent = (currentQuestionIndex /
+quizData.length) * 100;</p>
+
+<p class=MsoNormal>        progress.style.width = `${progressPercent}%`;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        optionsBox.innerHTML = '';</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        currentQuestion.options.forEach((option, index)
+=&gt; {</p>
+
+<p class=MsoNormal>            const button = document.createElement('button');</p>
+
+<p class=MsoNormal>            button.innerText = option;</p>
+
+<p class=MsoNormal>            button.classList.add('btn-option');</p>
+
+<p class=MsoNormal>            button.onclick = () =&gt; checkAnswer(index);</p>
+
+<p class=MsoNormal>            optionsBox.appendChild(button);</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    function checkAnswer(selectedIndex) {</p>
+
+<p class=MsoNormal>        const currentQuestion =
+quizData[currentQuestionIndex];</p>
+
+<p class=MsoNormal>        if (selectedIndex === currentQuestion.correct) {</p>
+
+<p class=MsoNormal>            score++;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        currentQuestionIndex++;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        if (currentQuestionIndex &lt; quizData.length) {</p>
+
+<p class=MsoNormal>            showQuestion();</p>
+
+<p class=MsoNormal>        } else {</p>
+
+<p class=MsoNormal>            showResult();</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    function showResult() {</p>
+
+<p class=MsoNormal>        progress.style.width = '100%';</p>
+
+<p class=MsoNormal>        quizScreen.style.display = 'none';</p>
+
+<p class=MsoNormal>        scoreScreen.style.display = 'block';</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        finalScore.innerText = `Anda mendapat ${score}
+daripada ${quizData.length} betul!`;</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        if(score &gt;= 12) {</p>
+
+<p class=MsoNormal>            badgeIcon.innerText = &quot;&#127942;&quot;;</p>
+
+<p class=MsoNormal>        } else if(score &gt;= 8) {</p>
+
+<p class=MsoNormal>            badgeIcon.innerText = &quot;⭐&quot;;</p>
+
+<p class=MsoNormal>        } else {</p>
+
+<p class=MsoNormal>            badgeIcon.innerText = &quot;&#128077;&quot;;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    function restartQuiz() {</p>
+
+<p class=MsoNormal>        startQuiz();</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    // Auto-initiate implementation</p>
+
+<p class=MsoNormal>    startQuiz();</p>
+
+<p class=MsoNormal>&lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+</div>
+
+</body>
+
+</html>
